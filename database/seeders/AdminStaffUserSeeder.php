@@ -22,6 +22,7 @@ class AdminStaffUserSeeder extends Seeder
             'username' => 'admin',
             'password' => Hash::make('12345'),
             'role' => 'admin',
+            'image' => 'alexander-jones.jpg',   
             'created_at' => now(),
             'updated_at' => now(),
         ]);

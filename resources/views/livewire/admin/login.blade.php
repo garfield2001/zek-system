@@ -13,7 +13,6 @@
                     Please sign in to your account
                 </p>
             </div>
-
             <!-- Form -->
             <form wire:submit.prevent="login" class="space-y-6">
                 <!-- Username -->
@@ -21,7 +20,7 @@
                     <label class="block text-sm font-medium text-gray-700" for="username">Username</label>
                     <input type="text" id="username" wire:model="username"
                         class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-red-500"
-                        placeholder="Username" required />
+                        placeholder="Username" autocomplete="username" required />
                 </div>
 
                 <!-- Password -->
@@ -30,7 +29,7 @@
                     <div class="mt-1 relative" x-data="{ show: false }">
                         <input :type="show ? 'text' : 'password'" id="password" wire:model="password"
                             class="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-red-500"
-                            placeholder="Password" required />
+                            placeholder="Password" autocomplete="current-password" required />
                         <button type="button" class="absolute inset-y-0 right-0 pr-3 flex items-center"
                             @click="show = !show">
                             <svg x-show="!show" class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24"
