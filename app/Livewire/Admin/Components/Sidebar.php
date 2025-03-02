@@ -8,22 +8,13 @@ use Illuminate\Support\Facades\Route;
 
 class Sidebar extends Component
 {
-    public $currentRoute;
 
-    public function mount()
+    public function render()
     {
-        $this->currentRoute = Route::currentRouteName();
+        return view('livewire.admin.components.sidebar');
     }
 
-    public function cateringPackages()
-    {
-        return redirect()->route('show.catering-packages.page');
-    }
 
-    public function dashboard()
-    {
-        return redirect()->route('show.dashboard.page');
-    }
 
     public function logout()
     {

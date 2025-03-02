@@ -31,6 +31,7 @@ class Login extends Component
         if (Auth::guard('admin_staff_user')->check()) {
             $this->redirect(route('show.dashboard.page'));
         }
+        
         return view('livewire.admin.login')->layoutData([
             'title' => $this->title
         ]);

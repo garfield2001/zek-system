@@ -28,15 +28,15 @@
         <ul>
             <li class="text-sm font-semibold text-gray-400 px-4 py-2">Main</li>
             <li>
-                <a href="#" wire:click='dashboard' class="block px-4 py-2 rounded hover:bg-blue-700
-                    {{ $currentRoute == 'show.dashboard.page' ? 'bg-blue-700 text-white' : '' }}">
+                <a wire:navigate="/dashboard" href="{{ route('show.dashboard.page') }}"
+                    class="block px-4 py-2 rounded hover:bg-blue-700">
                     <i class="fa-solid fa-gauge"></i> Dashboard
                 </a>
             </li>
             <li class="text-sm font-semibold text-gray-400 px-4 py-2">Manage Catering</li>
             <li>
-                <a href="#" wire:click='cateringPackages' class="block px-4 py-2 rounded hover:bg-blue-700
-                {{ $currentRoute == 'show.catering-packages.page' ? 'bg-blue-700 text-white' : '' }}">
+                <a wire:navigate="/catering_packages" href="{{ route('show.catering-packages.page') }}"
+                    class="block px-4 py-2 rounded hover:bg-blue-700">
                     <i class="fa-solid fa-box"></i> Catering Packages
                 </a>
             </li>
@@ -70,7 +70,8 @@
             </li>
             <li class="text-sm font-semibold text-gray-400 px-4 py-2">Account</li>
             <li>
-                <a href="#" wire:click.prevent='logout' class="block px-4 py-2 rounded hover:bg-blue-700">
+                <a wire:navigate="/logout" href="{{ route('logout.user') }}"
+                    class="block px-4 py-2 rounded hover:bg-blue-700">
                     <i class="fa-solid fa-right-from-bracket"></i> Logout
                 </a>
             </li>

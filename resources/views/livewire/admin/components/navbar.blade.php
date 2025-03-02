@@ -1,11 +1,12 @@
-<nav class="bg-blue-700 text-white p-4 flex justify-between items-center">
+<nav class="bg-blue-700 text-white px-4 py-1 flex justify-between items-center">
     <div class="flex items-center space-x-6">
         <button onclick="toggleSidebar()" class="text-white hover:text-gray-300">
             <i class="fas fa-bars"></i>
         </button>
         <nav class="flex space-x-4">
-            <a href="#" class="hover:text-gray-300">Home</a>
-            <a href="#" class="hover:text-gray-300">Contact</a>
+            <a wire:navigate="/dashboard" href="{{ route('show.dashboard.page') }}" class="hover:text-gray-300">Home</a>
+            <a wire:navigate="/contact-me" href="{{ route('show.contact-me.page') }}"
+                class="hover:text-gray-300">Contact</a>
         </nav>
     </div>
     <div class="flex items-center space-x-6">
