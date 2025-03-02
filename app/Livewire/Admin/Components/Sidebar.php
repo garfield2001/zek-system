@@ -4,13 +4,29 @@ namespace App\Livewire\Admin\Components;
 
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
+use Illuminate\Support\Facades\Route;
 
 class Sidebar extends Component
 {
-    public function render()
+    public $currentRoute;
+
+    public function mount()
     {
-        return view('livewire.admin.components.sidebar')->layout('components.layouts.app')->with([
-            'user' => Auth::guard('admin_staff_user')->user()
-        ]);
+        $this->currentRoute = Route::currentRouteName();
+    }
+
+    public function cateringPackages()
+    {
+        return redirect()->route('show.catering-packages.page');
+    }
+
+    public function dashboard()
+    {
+        return redirect()->route('show.dashboard.page');
+    }
+
+    public function logout()
+    {
+        $this->dispatch('logoutUser');
     }
 }

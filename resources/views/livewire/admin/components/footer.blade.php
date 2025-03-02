@@ -1,3 +1,3 @@
-<div>
-    {{-- Close your eyes. Count to one. That is how long forever feels. --}}
-</div>
+<footer class="bg-gray-200 text-slate-600 p-2 text-center mt-auto">
+    &copy; 2025 Zek Admin. All rights reserved.
+</footer>

@@ -18,7 +18,7 @@
                 <!-- Username -->
                 <div>
                     <label class="block text-sm font-medium text-gray-700" for="username">Username</label>
-                    <input type="text" id="username" wire:model="username"
+                    <input type="text" wire:model="username"
                         class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-red-500"
                         placeholder="Username" autocomplete="username" required />
                 </div>
@@ -27,7 +27,7 @@
                 <div>
                     <label class="block text-sm font-medium text-gray-700" for="password">Password</label>
                     <div class="mt-1 relative" x-data="{ show: false }">
-                        <input :type="show ? 'text' : 'password'" id="password" wire:model="password"
+                        <input :type="show ? 'text' : 'password'" wire:model="password"
                             class="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-red-500"
                             placeholder="Password" autocomplete="current-password" required />
                         <button type="button" class="absolute inset-y-0 right-0 pr-3 flex items-center"
@@ -48,22 +48,26 @@
                     </div>
                 </div>
 
-                <div class="flex items-center">
-                    <input type="checkbox" id="remember" wire:model="remember"
-                        class="h-4 w-4 text-red-600 focus:ring-red-500 border-gray-300 rounded" />
-                    <label for="remember" class="ml-2 block text-sm text-gray-700">Remember me</label>
+                <div class="flex items-center justify-between">
+                    <!-- Remember Me -->
+                    <div class="flex items-center">
+                        <input type="checkbox" wire:model="remember"
+                            class="h-4 w-4 text-red-600 focus:ring-red-500 border-gray-300 rounded" />
+                        <label for="remember" class="ml-2 block text-sm text-gray-700">Remember me</label>
+                    </div>
+
+                    <!-- Forgot Account Link -->
+                    <a href="#" class="text-sm text-red-600 hover:underline">
+                        Forgot account?
+                    </a>
                 </div>
 
+
                 <button type="submit"
-                    class="w-full flex justify-center py-2 px-4 sm:py-3 border border-transparent rounded-lg shadow-sm text-sm sm:text-base font-medium text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+                    class="hover:cursor-pointer w-full flex justify-center py-2 px-4 sm:py-3 border border-transparent rounded-lg shadow-sm text-sm sm:text-base font-medium text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
                     Sign In
                 </button>
             </form>
-
-            <p class="mt-6 text-center text-sm">
-                Don't have an account?
-                <a href="#" class="font-medium text-red-600 hover:text-red-700">Sign up now</a>
-            </p>
         </div>
     </div>
 </div>

@@ -8,7 +8,12 @@ use Livewire\Features\SupportRedirects\Redirector;
 
 class Dashboard extends Component
 {
-    public $title = "Dashboard";
+    public $title = 'Dashboard';
+
+    protected $listeners = [
+        'logoutUser' => 'logout'
+    ];
+    
     public function render()
     {
         return view('livewire.admin.dashboard')->layoutData([

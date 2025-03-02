@@ -9,5 +9,12 @@ export default defineConfig({
             refresh: true,
         }),
         tailwindcss(),
-    ]
+    ],
+    server: {
+        host: true, // Ito ang nagpapagana ng IPv4
+        hmr: {
+            host: '127.0.0.1', // IPv4
+        },
+        cors: true, // Allow CORS
+    },
 });

@@ -1,12 +1,36 @@
-
 <div class="flex h-screen overflow-hidden">
     <livewire:admin.components.sidebar />
-    <div id="main-content" class="flex-1 transition-all duration-300 ease-in-out z-10">
+    <main id="main-content"
+        class="flex-1 bg-gray-100 ml-64 transition-all duration-300 ease-in-out z-10 flex flex-col min-h-screen">
         <livewire:admin.components.navbar />
-        <main class="flex-1 p-6 overflow-auto">
-            <livewire:admin.components.header />
-            <livewire:admin.dashboard />
-        </main>
-    </div>
+        <section class="p-6 flex-grow">
+            <header class="bg-white shadow-lg rounded-lg p-6 mb-6">
+                <h2 class="text-2xl font-semibold text-blue-900 mb-4">Dashboard Overview</h2>
+                <p class="text-gray-700">Welcome to the Admin Dashboard!</p>
+            </header>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-blue-600 text-white p-6 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300">
+                    <h3 class="text-xl font-bold">Users</h3>
+                    <p class="text-lg">150</p>
+                </div>
+                <div
+                    class="bg-green-600 text-white p-6 rounded-lg shadow-lg hover:bg-green-700 transition duration-300">
+                    <h3 class="text-xl font-bold">Revenue</h3>
+                    <p class="text-lg">₱50,000</p>
+                </div>
+                <div
+                    class="bg-yellow-600 text-white p-6 rounded-lg shadow-lg hover:bg-yellow-700 transition duration-300">
+                    <h3 class="text-xl font-bold">Orders</h3>
+                    <p class="text-lg">75</p>
+                </div>
+                <div
+                    class="bg-violet-600 text-white p-6 rounded-lg shadow-lg hover:bg-violet-700 transition duration-300">
+                    <h3 class="text-xl font-bold">Reservations</h3>
+                    <p class="text-lg">75</p>
+                </div>
+            </div>
+        </section>
+        <livewire:admin.components.footer />
+    </main>
 </div>
-

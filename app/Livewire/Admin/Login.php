@@ -9,7 +9,7 @@ class Login extends Component
 {
     public $username = 'admin';
     public $password = '12345';
-    public $remember = '';
+    public $remember = false;
     public $title = 'Admin Login';
 
     public function login()
@@ -19,8 +19,8 @@ class Login extends Component
             'password' => ['required'],
         ]);
 
-        if (Auth::guard('admin_staff_user')->attempt($credentials, $this->remember)) {
-            return redirect()->intended('/dashboard_test');
+        if (Auth::guard('admin_staff_user')->attempt($credentials, $this->remember)) {  
+            return redirect()->intended(route('show.dashboard.page'));
         } else {
             $this->addError('username', 'Invalid username or password');
         }
@@ -29,7 +29,7 @@ class Login extends Component
     public function render()
     {
         if (Auth::guard('admin_staff_user')->check()) {
-            $this->redirect('/dashboard_test');
+            $this->redirect(route('show.dashboard.page'));
         }
         return view('livewire.admin.login')->layoutData([
             'title' => $this->title
