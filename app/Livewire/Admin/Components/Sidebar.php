@@ -11,13 +11,8 @@ class Sidebar extends Component
 
     public function render()
     {
-        return view('livewire.admin.components.sidebar');
-    }
-
-
-
-    public function logout()
-    {
-        $this->dispatch('logoutUser');
+        return view('livewire.admin.components.sidebar')->with([
+            'user' => Auth::guard('admin_staff_user')->user()
+        ]);
     }
 }

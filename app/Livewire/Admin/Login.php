@@ -19,11 +19,11 @@ class Login extends Component
             'password' => ['required'],
         ]);
 
-        if (Auth::guard('admin_staff_user')->attempt($credentials, $this->remember)) {  
-            return redirect()->intended(route('show.dashboard.page'));
-        } else {
+        if (!Auth::guard('admin_staff_user')->attempt($credentials, $this->remember)) {
             $this->addError('username', 'Invalid username or password');
         }
+
+        return redirect()->intended(route('show.dashboard.page'));
     }
 
     public function render()
@@ -31,7 +31,7 @@ class Login extends Component
         if (Auth::guard('admin_staff_user')->check()) {
             $this->redirect(route('show.dashboard.page'));
         }
-        
+
         return view('livewire.admin.login')->layoutData([
             'title' => $this->title
         ]);

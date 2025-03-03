@@ -21,7 +21,7 @@ class AdminStaffUserSeeder extends Seeder
             'phone_number' => '09913942391',
             'username' => 'admin',
             'password' => Hash::make('12345'),
-            'role' => 'admin',
+            'role' => 'Administrator',
             'image' => 'alexander-jones.jpg',   
             'created_at' => now(),
             'updated_at' => now(),
