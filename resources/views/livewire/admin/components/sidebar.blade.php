@@ -49,71 +49,72 @@
                     href="{{ route('show.catering-packages.page') }}"
                     class="block rounded p-2 px-4 text-gray-400 hover:bg-orange-400 hover:text-white">
                     <i class="fa-solid fa-box"></i>
-                    <span class=>
+                    <span>
                         Catering Packages
                     </span>
                 </a>
             </li>
             <li>
-                <a wire:navigate.hover
+                <a wire:navigate.hover wire:navigate="/meal_categories" href="{{ route('show.meal-categories.page') }}"
                     class="block rounded p-2 px-4 text-gray-400 hover:bg-orange-400 hover:text-white">
                     <i class="fa-solid fa-box"></i>
-                    <span class=>
+                    <span>
                         Meal Categories
                     </span>
                 </a>
             </li>
 
             <li>
-                <a wire:navigate.hover
+                <a wire:navigate.hover wire:navigate="/add_ons" href="{{ route('show.add-ons.page') }}"
                     class="block rounded p-2 px-4 text-gray-400 hover:bg-orange-400 hover:text-white">
                     <i class="fa-solid fa-box"></i>
-                    <span class=>Add-Ons</span>
+                    <span>Add-Ons</span>
                 </a>
             </li>
+
             <li>
-                <a wire:navigate.hover
+                <a wire:navigate.hover wire:navigate="/dishes" href="{{ route('show.dishes.page') }}"
                     class="block rounded p-2 px-4 text-gray-400 hover:bg-orange-400 hover:text-white">
                     <i class="fa-solid fa-box"></i>
-                    <span class=>Dishes</span>
+                    <span>Dishes</span>
                 </a>
             </li>
             <li class="px-1 py-2 text-sm font-semibold text-gray-300">
                 General Management
             </li>
             <li>
-                <a wire:navigate.hover
+                <a wire:navigate.hover wire:navigate="/reservations" href="{{ route('show.reservations.page') }}"
                     class="block rounded p-2 px-4 text-gray-400 hover:bg-orange-400 hover:text-white">
                     <i class="fa-solid fa-box"></i>
 
-                    <span class=>
+                    <span>
                         Reservations
                     </span>
                 </a>
             </li>
             <li>
-                <a wire:navigate.hover
+                <a wire:navigate.hover wire:navigate="/staffs" href="{{ route('show.staffs.page') }}"
                     class="block rounded p-2 px-4 text-gray-400 hover:bg-orange-400 hover:text-white">
                     <i class="fa-solid fa-user"></i>
-                    <span class=>Staffs</span>
+                    <span>Staffs</span>
                 </a>
             </li>
             <li>
-                <a wire:navigate.hover
+                <a wire:navigate.hover wire:navigate="/reports" href="{{ route('show.reports.page') }}"
                     class="block rounded p-2 px-4 text-gray-400 hover:bg-orange-400 hover:text-white">
                     <i class="fas fa-file-alt"></i>
 
-                    <span class=>Reports</span>
+                    <span>Reports</span>
                 </a>
             </li>
             <li class="px-1 py-2 text-sm font-semibold text-gray-300">
                 System Settings
             </li>
             <li>
-                <a wire:navigate.hover
+                <a wire:navigate.hover wire:navigate="/system_settings" href="{{ route('show.system-settings.page') }}"
                     class="block rounded p-2 px-4 text-gray-400 hover:bg-orange-400 hover:text-white">
                     <i class="fa-solid fa-gear"></i>
-                    <span class=>Settings</span>
+                    <span>Settings</span>
                 </a>
             </li>
         </ul>

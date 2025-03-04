@@ -8,7 +8,7 @@
                 class="text-gray-600 hover:text-gray-800">
                 Home
             </a>
-            <a wire:navigate="/contact-me" href="{{ route('show.contact-me.page') }}"
+            <a wire:navigate="/contact_me" href="{{ route('show.contact-me.page') }}"
                 class="text-gray-600 hover:text-gray-800">
                 Contact
             </a>

@@ -7,10 +7,18 @@ use Illuminate\Support\Facades\Auth;
 
 class Login extends Component
 {
-    public $username = 'admin';
-    public $password = '12345';
-    public $remember = false;
-    public $title = 'Admin Login';
+    public $username;
+    public $password;
+    public $remember;
+    public $title;
+
+    public function mount()
+    {
+        $this->username = 'admin';
+        $this->password = '12345';
+        $this->remember = false;
+        $this->title = 'Admin Login';
+    }
 
     public function login()
     {

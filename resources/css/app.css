@@ -15,3 +15,14 @@
 }
 
 @import '@fortawesome/fontawesome-free/css/all.min.css';
+
+
+@import 'datatables.net-dt/css/dataTables.dataTables.min.css';
+@import 'datatables.net-buttons-dt/css/buttons.dataTables.css';
+@import 'datatables.net-responsive-dt/css/responsive.dataTables.css';
+@import 'datatables.net-scroller-dt/css/scroller.dataTables.css';
+@import 'datatables.net-searchpanes-dt/css/searchPanes.dataTables.css';
+
+.datatable-container {
+    @import 'bootstrap/dist/css/bootstrap.min.css';
+}
