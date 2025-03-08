@@ -1,12 +1,11 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardTest;
 use App\Livewire\Admin\AddOns;
 use App\Livewire\Admin\CateringPackages;
 use App\Livewire\Admin\ContactMe;
 use App\Livewire\Admin\Dashboard;
-use App\Livewire\Admin\DashboardTest;
 use App\Livewire\Admin\Dishes;
-use App\Livewire\Admin\Index;
 use App\Livewire\Admin\Login;
 use App\Livewire\Admin\MealCategories;
 use App\Livewire\Admin\Reports;
@@ -42,7 +41,7 @@ Route::middleware(['auth:admin_staff_user'])->group(function () {
     Route::get('/logout', [Dashboard::class, 'logout'])->name('logout.user');
 
     /* Testing Purposes */
-    Route::get('/dashboard_test', DashboardTest::class);
+    /* Route::get('/test', [DashboardTest::class, 'index'])->name('show.dashboard.page'); */
 });
 
 Route::redirect('login', 'admin')->name('login');
